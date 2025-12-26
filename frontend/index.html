@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Klasifikasi Gambar Sampah Menggunakan Metode CNN</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+    <main class="container">
+        <header class="header">
+            <h1>Klasifikasi Gambar Sampah Menggunakan Metode CNN</h1>
+            <p>Klasifikasi gambar sampah: <b>Organik</b> vs <b>Non-Organik</b> menggunakan metode CNN.</p>
+        </header>
+
+        <section class="card">
+            <h2>Upload Gambar Sampah</h2>
+
+            <div class="grid">
+                <div>
+                    <input id="file" type="file" accept="image/png,image/jpeg,image/webp" />
+                    <div class="hint">Format: JPG / PNG / WEBP · Maks 5MB</div>
+
+                    <div class="actions">
+                        <button id="btnPredict" class="btn" disabled>Prediksi</button>
+                        <button id="btnReset" class="btn secondary" disabled>Reset</button>
+                    </div>
+
+                    <div id="status" class="status"></div>
+                    <div id="result" class="result hidden"></div>
+                </div>
+
+                <div class="previewWrap">
+                    <div class="previewTitle">Preview</div>
+                    <img id="preview" class="preview hidden" alt="Preview gambar" />
+                    <div id="placeholder" class="placeholder">Belum ada gambar</div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <small>Backend: FastAPI · Model: TensorFlow · UI: HTML/JS</small>
+        </footer>
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+
+</html>
